@@ -20,7 +20,7 @@
       });
 
       function message(m) {
-        $('<li>').text(m).appendTo('.messages ul');
+        $('<li>').text(m).prependTo('.messages ul');
       }
 
       var socket = new WebSocket('ws://<%= request.host %>:<%= request.port %>/messages');

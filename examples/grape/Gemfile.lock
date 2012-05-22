@@ -1,0 +1,52 @@
+GIT
+  remote: https://github.com/intridea/grape
+  revision: bed7867558ea2117824c85a043f77116ea95afd3
+  branch: frontier
+  specs:
+    grape (0.2.0)
+      hashie (~> 1.2)
+      multi_json
+      multi_xml
+      rack
+      rack-mount
+
+PATH
+  remote: /Users/jch/projects/rack-stream
+  specs:
+    rack-stream (0.0.2)
+      em-synchrony
+      eventmachine
+      faye-websocket
+      rack
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.8)
+    em-synchrony (1.0.1)
+      eventmachine (>= 1.0.0.beta.1)
+    eventmachine (1.0.0.beta.4)
+    faye-websocket (0.4.5)
+      eventmachine (>= 0.12.0)
+    hashie (1.2.0)
+    hiredis (0.4.5)
+    multi_json (1.3.5)
+    multi_xml (0.5.1)
+    rack (1.4.1)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
+    redis (2.2.2)
+    thin (1.3.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  grape!
+  hiredis
+  rack-stream!
+  redis
+  thin

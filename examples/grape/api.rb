@@ -2,15 +2,21 @@ require 'grape'
 require 'rack/stream'
 require 'redis'
 require 'redis/connection/synchrony'
+require 'uri'
 
 class API < Grape::API
   default_format :txt
 
   helpers do
     include Rack::Stream::DSL
+    REDIS_CONFIG = URI.parse(ENV["REDISTOGO_URL"] || "redis://127.0.0.1:6379/0")
 
     def redis
-      @redis ||= Redis.new
+      @redis ||= Redis.new({
+        :host     => REDIS_CONFIG.host,
+        :port     => REDIS_CONFIG.port,
+        :password => REDIS_CONFIG.password
+      })
     end
 
     def build_message(text)
