@@ -1,8 +1,8 @@
 # rack-stream [![Build Status](https://secure.travis-ci.org/intridea/rack-stream.png)](http://travis-ci.org/jch/rack-stream)
 
-## Overview
+rack-stream is middleware for building multi-protocol streaming rack endpoints. For a general introduction, check out ["Building Streaming REST APIs with Ruby"](http://www.whatcodecraves.com/articles/2012/05/24/building-streaming-rest-apis-with-ruby).
 
-rack-stream is middleware for building multi-protocol streaming rack endpoints.
+**Update** I've stopped working on this project for now. I found it tricky to integrate with existing non-evented Ruby web applications and haven't found a practical way to deploy this for production applications. To add pubsub or push to a traditional application, I've been using [Pusher](http://pusher.com) or [Faye](http://faye.jcoglan.com).
 
 ## Installation
 
@@ -289,7 +289,6 @@ haven't tried it yet. The only app server I've tried running is Thin.
 * add sinatra example that serves page that uses JS to connect
 * deployment guide
 * better integration with rails
-
 * body: don't enqueue more chunks if state is succeeded?
 * performance: GC, cleanup references, profile
 
