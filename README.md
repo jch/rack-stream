@@ -1,6 +1,6 @@
-# rack-stream [![Build Status](https://secure.travis-ci.org/intridea/rack-stream.png)](http://travis-ci.org/jch/rack-stream)
+# rack-stream
 
-rack-stream is middleware for building multi-protocol streaming rack endpoints. For a general introduction, check out ["Building Streaming REST APIs with Ruby"](http://www.whatcodecraves.com/articles/2012/05/24/building-streaming-rest-apis-with-ruby).
+rack-stream is middleware for building multi-protocol streaming rack endpoints. For a general introduction, check out ["Building Streaming REST APIs with Ruby"](http://jch.github.io/posts/2012-05-24-building-streaming-rest-apis-with-ruby.html).
 
 **Update** I've stopped working on this project for now. I found it tricky to integrate with existing non-evented Ruby web applications and haven't found a practical way to deploy this for production applications. To add pubsub or push to a traditional application, I've been using [Pusher](http://pusher.com) or [Faye](http://faye.jcoglan.com).
 
